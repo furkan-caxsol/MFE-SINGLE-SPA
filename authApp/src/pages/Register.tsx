@@ -10,30 +10,28 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
+import { useEffect } from "react";
 import { getAuthToken, setAuthToken } from "@hr/services";
 import { useNavigate } from "react-router-dom";
 
 type Props = {};
 
-export default function Login({}: Props) {
+export default function Register({}: Props) {
   const navigate = useNavigate();
 
-  const ADD_TODO = gql`
-    mutation UserLogin($username: String!, $password: String!) {
-      login(username: $username, password: $password)
+  const REGISTER_USER = gql`
+    mutation RegisterUser($username: String!, $password: String!) {
+      signup(username: $username, password: $password)
     }
   `;
-
-  const [userLogIn, { data, loading, error }] = useMutation(ADD_TODO);
-  if(error){
-    alert(`${error}`)
-  }
+ 
+  const [registerUser, response] = useMutation(REGISTER_USER);
 
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
 
-    userLogIn({
+    registerUser({
       variables: {
         username: data.get("email"),
         password: data.get("password"),
@@ -42,8 +40,8 @@ export default function Login({}: Props) {
         if (data?.login) {
           setAuthToken(data.login);
         }
-        alert('logged in successfully')
-        navigate("/dashboard");
+        alert('Registered successfully')
+        navigate("/auth/login");
       },
       onError: (error) => {
         alert(error)
@@ -65,7 +63,7 @@ export default function Login({}: Props) {
         }}
       >
         <Typography component="h1" variant="h5">
-          Sign in
+          Sign up
         </Typography>
         <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
           <TextField
@@ -98,7 +96,7 @@ export default function Login({}: Props) {
             variant="contained"
             sx={{ mt: 3, mb: 2 }}
           >
-            Sign In
+            Sign Up
           </Button>
           <Grid container>
             <Grid item xs>
@@ -106,12 +104,11 @@ export default function Login({}: Props) {
                 {/* Forgot password? */}
               </Link>
             </Grid>
-            <Grid item>
-             
-              <Typography  onClick={()=>{
-                navigate("/auth/signup")
+            <Grid item >
+               <Typography  onClick={()=>{
+                navigate("/auth/login")
               }} sx={{color:'#1769aa', fontSize:'14px' ,cursor:'pointer'}}>
-                Don't have an account? Sign Up
+                Already have an account? Sign In.
               </Typography>
             </Grid>
           </Grid>

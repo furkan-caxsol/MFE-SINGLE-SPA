@@ -1,23 +1,14 @@
-import Err from "./App";
 import Login from "./pages/Login";
-
+import { ServiceClient, publicApiFunction, getAuthToken } from "@hr/services";
+import { ApolloProvider } from "@apollo/client";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import App from "./App";
 export default function Root(props) {
-
-  const value = localStorage.getItem('test')
-  console.log('value',value)
-  // <style>
-
-  
-  // </style>
-  return (<div style={{border:'1px solid red'}}>
-
-{/* <Err onError={()=> new Error('ss')}> */}
-    <Login/>
-{/* </Err> */}
-
-
-
-  </div>)
-  
- 
+  return (
+    <BrowserRouter>
+      <ApolloProvider client={ServiceClient}>
+        <App/>
+      </ApolloProvider>
+    </BrowserRouter>
+  );
 }

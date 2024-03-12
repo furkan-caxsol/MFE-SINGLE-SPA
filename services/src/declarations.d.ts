@@ -1,5 +1,3 @@
-import { ApolloClient } from '@apollo/client';
-
 declare module "*.html" {
   const rawHtmlFile: string;
   export = rawHtmlFile;
@@ -40,19 +38,3 @@ declare module "*.svg" {
   export default src;
 }
 
-// declare module "@hr/services" {
-
-//   export interface User {
-//     id: string;
-//     name: string;
-//   }
-
-//   export interface AuthToken {
-//     token: string;
-//     expires: Date;
-//   }
-//   export function getUser(userId: string): Promise<User>;
-//   export function authenticate(username: string, password: string): Promise<AuthToken>;
-// }
-
-// declare module "@hr/services" 
