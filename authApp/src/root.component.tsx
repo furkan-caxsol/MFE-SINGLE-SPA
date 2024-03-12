@@ -1,23 +1,14 @@
-import Err from "./App";
+import Demo from "./pages/Demo";
 import Login from "./pages/Login";
+// import {FormGroup} from "@hr/style-guide"
 
 export default function Root(props) {
-
-  const value = localStorage.getItem('test')
-  console.log('value',value)
-  // <style>
-
-  
-  // </style>
-  return (<div style={{border:'1px solid red'}}>
-
-{/* <Err onError={()=> new Error('ss')}> */}
+  return (
+  <div style={{border:'1px solid red'}}>
     <Login/>
-{/* </Err> */}
-
-
-
-  </div>)
+    <Demo/>
+    {/* <FormGroup/> */}
+  </div>
   
- 
+  )
 }
