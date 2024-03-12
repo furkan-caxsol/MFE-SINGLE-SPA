@@ -28,8 +28,11 @@
 </style>
   <main>
     <route path="/auth" >
-      <!-- <application name="@single-spa/welcome"></application> -->
       <application name="@hr/authapp" calssName="test"></application>
+    </route>
+
+    <route path="/dashboard" >
+      <application name="@hr/dashboard"></application>
     </route>
   </main>
 </single-spa-router>

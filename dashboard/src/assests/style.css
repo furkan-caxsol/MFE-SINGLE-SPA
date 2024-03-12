@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh; /* Center vertically on the entire viewport height */
+    background: linear-gradient(to right, #ff75c3, #70e2ff); /* Gradient background */
+  }
+  
+  .container h1 {
+    font-size: 36px;
+    color: white; 
+    padding: 10px; 
+  }
