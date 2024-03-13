@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Root Config</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Caxsol MFE POC</title>
 
     <!--
     Remove this if you only support browsers that support async/await.
@@ -51,18 +51,20 @@
     <!-- Add your organization's prod import map URL to this script's src  -->
     <!-- <script type="systemjs-importmap" src="/importmap.json"></script> -->
 
-    <% if (isLocal) { %>
-    <script type="systemjs-importmap">
-      {
-        "imports": {
-          "@single-spa/welcome": "https://unpkg.com/single-spa-welcome/dist/single-spa-welcome.js",
-          "@hr/root-config": "//localhost:9000/hr-root-config.js",
-          "@hr/authapp": "//localhost:8080/hr-authapp.js",
-          "@hr/style-guide": "//localhost:8081/hr-style-guide.js"
-        }
+  <% if (isLocal) { %>
+  <script type="systemjs-importmap">
+    {
+      "imports": {
+        "@single-spa/welcome": "https://unpkg.com/single-spa-welcome/dist/single-spa-welcome.js",
+        "@hr/root-config": "//localhost:9000/hr-root-config.js",
+        "@hr/authapp":"//localhost:8080/hr-authapp.js",
+        "@hr/services":"//localhost:8081/hr-services.js",
+        "@hr/dashboard":"//localhost:8082/hr-dashboard.js",
+        "@hr/style-guide":"//localhost:8083/hr-style-guide.js"
       }
-    </script>
-    <% } %>
+    }
+  </script>
+  <% } %>
 
     <!--
     If you need to support Angular applications, uncomment the script tag below to ensure only one instance of ZoneJS is loaded

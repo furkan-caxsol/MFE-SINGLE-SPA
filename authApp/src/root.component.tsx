@@ -1,14 +1,13 @@
-import Demo from "./pages/Demo";
-import Login from "./pages/Login";
-// import {FormGroup} from "@hr/style-guide"
-
+import { ServiceClient, publicApiFunction, getAuthToken } from "@hr/services";
+import { ApolloProvider } from "@apollo/client";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import App from "./App";
 export default function Root(props) {
   return (
-  <div style={{border:'1px solid red'}}>
-    <Login/>
-    <Demo/>
-    {/* <FormGroup/> */}
-  </div>
-  
-  )
+    <BrowserRouter>
+      <ApolloProvider client={ServiceClient}>
+        <App/>
+      </ApolloProvider>
+    </BrowserRouter>
+  );
 }

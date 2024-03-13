@@ -1,8 +1,8 @@
 {
-  "name": "@hr/style-guide",
+  "name": "@hr/services",
   "scripts": {
     "start": "webpack serve",
-    "start:standalone": "webpack serve --port 8083 --env standalone",
+    "start:standalone": "webpack serve --port 8081 --env standalone",
     "build": "concurrently npm:build:*",
     "build:webpack": "webpack --mode=production",
     "analyze": "webpack --mode=production --env analyze",
@@ -48,20 +48,17 @@
     "webpack-merge": "^5.8.0"
   },
   "dependencies": {
-    "@emotion/react": "^11.11.4",
-    "@emotion/styled": "^11.11.0",
-    "@material-ui/core": "^4.12.4",
-    "@mui/material": "^5.15.12",
+    "@apollo/client": "^3.9.6",
     "@types/jest": "^27.0.1",
     "@types/react": "^17.0.19",
     "@types/react-dom": "^17.0.9",
     "@types/systemjs": "^6.1.1",
     "@types/webpack-env": "^1.16.2",
+    "graphql": "^16.8.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "single-spa": "^5.9.3",
-    "single-spa-react": "^4.3.1",
-    "styled-components": "^6.1.8"
+    "single-spa-react": "^4.3.1"
   },
-  "types": "dist/hr-style-guide.d.ts"
+  "types": "dist/hr-services.d.ts"
 }
