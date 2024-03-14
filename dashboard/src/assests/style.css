@@ -1,14 +1,14 @@
-.container {
+/* .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    height: 100vh; /* Center vertically on the entire viewport height */
-    background: linear-gradient(to right, #ff75c3, #70e2ff); /* Gradient background */
-  }
+    flex-direction: row;
+    height: 100vh; 
+    background: linear-gradient(to right, #ff75c3, #4c6469); 
+  } */
   
-  .container h1 {
+  /* .container h1 {
     font-size: 36px;
     color: white; 
     padding: 10px; 
-  }
+  } */

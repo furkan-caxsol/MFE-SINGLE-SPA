@@ -1,8 +1,8 @@
 
 // export {FormGroup} from './Molecules/FormInput';
 
+//Molecules
 export {SearchForm} from './Molecules/InputGroup/FormInput';
 
-export function testFunction () {
-    console.log("Hey call from test function");
-}
+//Organisms
+export {Main} from './Templates/Main/Main'

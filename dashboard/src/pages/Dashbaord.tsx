@@ -1,26 +1,30 @@
-import React from 'react'
-import '../assests/style.css'
+import React from "react";
+import "../assests/style.css";
 //@ts-ignore
 import { getAuthToken, setAuthToken } from "@hr/services";
-import { useNavigate } from 'react-router-dom';
+//@ts-ignore
+import {Main} from "@hr/style-guide";
+import { useNavigate } from "react-router-dom";
 
-type Props = {}
+type Props = {};
 
-function Dashbaord({}: Props) {
-    const navigate = useNavigate()  
-  const handleLogOut = ()=>{
-    localStorage.removeItem("authToken")
-    navigate('/auth/login')
-  }
+function Dashboard({}: Props) {
+  const navigate = useNavigate();
+  const handleLogOut = () => {
+    localStorage.removeItem("authToken");
+    navigate("/auth/login");
+  };
   return (
-    <div className='container'>
-        <h1>This is Dashbaord</h1>
-        <div>
-         <button style={{alignItems:'center'}} onClick={handleLogOut}>Logout</button>
-        </div>
-        </div>
-         
-  )
+    <div >
+      {/* <h1>This is Dashboard</h1>
+      <div>
+        <button style={{ alignItems: "center" }} onClick={handleLogOut}>
+          Logout
+        </button>
+      </div> */}
+      <Main/>
+    </div>
+  );
 }
 
-export default Dashbaord
+export default Dashboard;

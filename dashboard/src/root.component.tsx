@@ -12,7 +12,8 @@ export default function Root(props) {
         <Routes>
           <Route
             path="/dashboard"
-            element={<PrivateRoute element={<Dashbaord />}></PrivateRoute>}
+            // element={<PrivateRoute element={<Dashbaord />}></PrivateRoute>}
+            element={<Dashbaord/>}
           ></Route>
         </Routes>
       </BrowserRouter>
