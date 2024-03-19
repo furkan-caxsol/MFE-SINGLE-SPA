@@ -11,9 +11,17 @@
   width: 100%;
   height: 100vh;
 }
-.main-right{
-    position: relative;
-    width: 85%;
-    height: 100vh;
-    margin: 0 auto;
+.main-right {
+  position: relative;
+  width: 85%;
+  height: 100vh;
+  margin: 0 auto;
+}
+.drawer-hidden,
+.drawer-visible {
+  display: none !important;
+  cursor: pointer !important;
+}
+.drawer-hidden {
+  display: block !important;
 }

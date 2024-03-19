@@ -1,38 +1,20 @@
 <single-spa-router>
-  <!--
-
-    This is the single-spa Layout Definition for your microfrontends.
-    See https://single-spa.js.org/docs/layout-definition/ for more information.
-
-  -->
-
-  <!-- Example layouts you might find helpful:
-
-  <nav>
-    <application name="@org/navbar"></application>
-  </nav>
-  <route path="settings">
-    <application name="@org/settings"></application>
-  </route>
-
-  -->
-<style>
-  :root{
-    background-color: #d9f0f0;
-    margin: 0px;
-  }
-  body{
-    margin:0px
-  }
-
-</style>
+  <style>
+    :root {
+      background-color: #d9f0f0;
+      margin: 0px;
+    }
+    body {
+      margin: 0px;
+    }
+  </style>
+  <link rel="stylesheet" href="style.css" />
   <main>
-    <route path="/auth" >
-      <application name="@hr/authapp" calssName="test"></application>
+    <route path="/auth">
+      <application name="@hr/authapp"></application>
     </route>
-
-    <route path="/dashboard" >
-      <application name="@hr/dashboard"></application>
+    <route path="/dashboard">
+        <application name="@hr/dashboard"></application>
     </route>
   </main>
 </single-spa-router>

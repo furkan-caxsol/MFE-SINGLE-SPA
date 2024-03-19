@@ -22,7 +22,7 @@ function Dashboard({}: Props) {
           Logout
         </button>
       </div> */}
-      <Main/>
+      {/* <Main/> */}
     </div>
   );
 }
