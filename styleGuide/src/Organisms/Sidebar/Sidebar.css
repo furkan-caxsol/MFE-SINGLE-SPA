@@ -5,6 +5,11 @@
     background-color: #fff;
     border-radius: 8px;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+}
+.link-style{
+    margin-bottom: 30px;
+}
+.link-style a{
+    text-decoration: none;
 }

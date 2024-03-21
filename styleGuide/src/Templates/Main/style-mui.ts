@@ -4,7 +4,7 @@ import Box from "@mui/material/Box";
 
 const drawerWidth = 240;
 const $lightgray = "#e2e2e2"; // Define your SCSS variable
-const $iconcolor = "#35bdbd"; // Define your SCSS variable
+const $iconcolor = "#6363ed"; // Define your SCSS variable
 
 interface AppBarProps extends MuiAppBarProps {
   open?: boolean;
@@ -41,42 +41,6 @@ export const Main = styled("main", {
   "@media (max-width: 768px)": {
     padding: "0 !important",
   },
-}));
-
-export const Foot = styled("footer", {
-  shouldForwardProp: (prop) => prop !== "open",
-})<{
-  open?: boolean;
-}>(({ theme, open }) => ({
-  position: "absolute",
-  bottom: "0px",
-  marginTop: "25px",
-  background: $lightgray,
-  textAlign: "center",
-  padding: "10px",
-  left: "0px",
-  right: "0",
-  width: "100%",
-  transition: theme.transitions.create(["margin", "width"], {
-    easing: theme.transitions.easing.sharp,
-    duration: theme.transitions.duration.leavingScreen,
-  }),
-  marginBottom: "0px",
-  marginRight: "0px",
-  zIndex: 1,
-  ...(open && {
-    width: `calc(100% - (${drawerWidth}px))`,
-    left: "240px",
-    marginRight: "0px",
-    transition: theme.transitions.create(["margin", "width"], {
-      easing: theme.transitions.easing.easeOut,
-      duration: theme.transitions.duration.enteringScreen,
-    }),
-    "@media (max-width: 900px)": {
-      width: "100%",
-      marginRight: "0px",
-    },
-  }),
 }));
 
 export const AppHeader = styled(MuiAppBar, {

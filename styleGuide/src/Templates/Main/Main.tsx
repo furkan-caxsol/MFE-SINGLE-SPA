@@ -45,7 +45,6 @@ import { useTheme } from "@mui/material/styles";
 import {
   AppHeader,
   DrawerHeader,
-  Foot,
   Main,
   BodyBox,
   MySkills,
